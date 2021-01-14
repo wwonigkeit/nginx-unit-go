@@ -155,6 +155,7 @@ func main() {
 		port = "80"
 	}
 	log.Printf("Binding port: %s\n", port)
+	//err = http.ListenAndServe(":"+port, nil)
 	err = unit.ListenAndServe(":"+port, nil)
 	if err != nil {
 		log.Fatal(err)
