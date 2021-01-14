@@ -2,7 +2,7 @@
 
 Hello World is a simple webserver to use as an introduction to Vorteil. It hosts a webpage containing a simple hello world message with Vorteil's logo. The background colour of the page can be controlled by setting the BACKGROUND envrionment variable to any valid HTML colour code.
 
-The code has been specifically modified for the [NGINX Unit platform!](https://unit.nginx.org/]
+The code has been specifically modified for the [NGINX Unit platform!](https://unit.nginx.org/)
 
 ## Compilation
 
