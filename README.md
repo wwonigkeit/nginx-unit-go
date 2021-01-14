@@ -4,6 +4,28 @@ Hello World is a simple webserver to use as an introduction to Vorteil. It hosts
 
 The code has been specifically modified for the [NGINX Unit platform!](https://unit.nginx.org/)
 
+The following changes are needed:
+```go
+import (
+    ...
+    "unit.nginx.org/go"
+    ...
+)
+```
+
+and
+
+```go
+func main() {
+    ...
+    http.HandleFunc("/", handler)
+    ...
+    //http.ListenAndServe(":8080", nil)
+    unit.ListenAndServe(":8080", nil)
+    ...
+}
+```
+
 ## Compilation
 
 ```sh
