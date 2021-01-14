@@ -96,7 +96,7 @@ func main() {
 	colour := *wordPtr
 
 	if colour == "" {
-		log.Printf("No background color set in BACKGROUND environment variable\n")
+		log.Printf("No background colour set in --colour argument\n")
 		colour = white
 	}
 
@@ -104,7 +104,7 @@ func main() {
 	colour = strings.ToUpper(colour)
 
 	if len(colour) != 7 {
-		log.Printf("Invalid BACKGROUND color: must be six characters of hexadecimal (like '0xFFFFFF')\n")
+		log.Printf("Invalid background colour: must be six characters of hexadecimal (like '0xFFFFFF')\n")
 		colour = white
 	}
 
@@ -116,7 +116,7 @@ func main() {
 		}
 	}
 	if !valid {
-		log.Printf("Invalid BACKGROUND color: non-hexadecimal characters detected\n")
+		log.Printf("Invalid background colour: non-hexadecimal characters detected\n")
 		colour = white
 	}
 
