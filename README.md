@@ -14,53 +14,18 @@ To simplify the process of getting Hello World to run in a Virtual Machine, we s
 
 ## Running
 
-The helloworld binary does not require any arguments.
+The helloworld binary requires a `--colour` argument
 
 ```sh
-./helloworld
+./helloworld --colour=0xFFFFFF
 ```
+
+The argument colour: must be six characters of hexadecimal (like '0xFFFFFF')
 
 Should return something like
 
 ```
-2017/10/13 11:14:32 No background color set in BACKGROUND environment variable
-2017/10/13 11:14:32 Binding port: 8888
+2017/10/13 11:14:32 Binding port: 80
 ```
 
-As you might have guessed, you can set the background colour by specifying the BACKGROUND environment variable like so
-
-```sh
-BACKGROUND="0x000000" ./helloworld
-```
-
-You can connect to the web server by visiting http://localhost:8888/
-
-## Vorteil
-
-Testing helloworld in a Vorteil VM is easy.
-
-```sh
-vcli run
-```
-
-All configuration has already been applied within the helloworld.vcfg file.
-
-Test the Vorteil app by connecting to http://localhost:8888/. Or use whichever port VCLI was able to bind. Once you've seen it working, compile the binary into a Vorteil Package to finish making the Vorteil app.
-
-```sh
-vcli package --icon vorteil.png
-```
-
-## VMS
-
-Log in to VMS at https://go-vorteil.io
-
-Upload the 'helloworld.vorteil' package you created by clicking on Applications on the sidebar and then the upload button in the upper-right corner of the main panel (it looks like an upward pointing blue arrow). When the popup window shows up, give your app a name like "helloworld".
-
-Click on your new app in the file browser. This takes you to an application details page.
-
-Click the "Actions" button, and then select "Deploy" from the drop-down menu.
-
-Scroll down to the place where the number of VMs to deploy is listed, and change it to "1". Then click "Deploy".
-
-VMS will redirect you to a deployment details page. Once the page finished loading, a url next to "URLs" will take you to your application's publically accessible internet webpage.
+You can connect to the web server by visiting http://localhost/
