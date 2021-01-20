@@ -39,10 +39,10 @@ To simplify the process of getting Hello World to run in a Virtual Machine, we s
 The helloworld binary requires a `--colour` argument
 
 ```sh
-./helloworld --colour=0xFFFFFF
+./helloworld --colour=#FFFFFF
 ```
 
-The argument colour: must be six characters of hexadecimal (like '0xFFFFFF')
+The argument colour: must be six characters of hexadecimal (like '#FFFFFF')
 
 Should return something like
 
